@@ -14,7 +14,7 @@
   font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 6fr;
 }
 
 .sidebar {
@@ -23,7 +23,6 @@
   grid-row: 1 / -1;
   display: grid;
   grid-template-rows: 0.5fr 2fr 1fr 3fr;
-  padding-right: 40px;
 }
 
 .logo {
@@ -31,7 +30,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 0 40px 15px;
+  flex-wrap: wrap;
+  padding: 20px 0;
 }
 
 .menu1,
@@ -41,33 +41,23 @@
   justify-content: center;
 }
 
-.menu2 {
-  padding-top: 20px;
-  gap: 10px;
-}
-
 .item {
   width: 150px;
   display: flex;
   justify-content: start;
   align-items: center;
-}
-
-.header {
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  background-color: white;
+  padding-left: 10px;
 }
 
 .searchbar {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  padding-bottom: 20px;
 }
 
 .input {
   display: flex;
   align-items: center;
-
   padding: 10px 20px;
 }
 
@@ -80,7 +70,7 @@ input {
   border: none;
   border-radius: 100px;
   font-size: 24px;
-  min-width: 180px;
+  max-width: 500px;
   flex: 1;
 }
 
@@ -92,7 +82,7 @@ input {
 
 .title {
   display: grid;
-  grid-template-columns: repeat(3 1fr);
+  padding-bottom: 20px;
 }
 
 .account {
@@ -124,11 +114,12 @@ input {
 }
 
 .options button {
+  width: 60px;
+  height: 30px;
   color: white;
   background-color: var(--blue);
   border: none;
   border-radius: 20px;
-  padding: 10px 20px;
   cursor: pointer;
 }
 
@@ -139,27 +130,25 @@ input {
 .main {
   grid-column: 2 / 3;
   display: grid;
-  grid-template-rows: 0.1fr;
+
   grid-template-columns: 3fr 1fr;
   background-color: var(--slate);
   padding-left: 10px;
   padding-bottom: 50px;
-}
-
-.main-nav {
-  grid-area: 1 / 1 / -1 / -1;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  align-items: end;
-}
-
-.main-nav p {
-  padding: 20px 0 0 10px;
+  padding-top: 20px;
 }
 
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding-top: 20px;
+  position: relative;
+}
+
+.projects-title {
+  position: absolute;
+  top: 5px;
+  left: 15px;
 }
 
 .projects .card {
@@ -175,9 +164,13 @@ input {
   opacity: 0.5;
 }
 
+.projects .card div p {
+  padding-bottom: 40px;
+}
+
 .card .card-icons {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   right: 10px;
 }
 
@@ -186,11 +179,13 @@ input {
 }
 
 .right-side {
-  display: grid;
-  grid-template-rows: 1fr 0.1fr 1fr;
-  margin-top: 10px;
+  padding-top: 10px;
   margin-left: 10px;
   padding-right: 40px;
+}
+
+.cards-title {
+  padding-bottom: 5px;
 }
 
 .announce {
